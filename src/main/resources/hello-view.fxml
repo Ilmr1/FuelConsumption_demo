@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="460.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.fuelconsumption_demo.HelloController">
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutY="20.0" spacing="10">
+            <children>
+                <Label fx:id="distanceLabel" text="%distance.label" />
+                <TextField fx:id="distanceField" prefWidth="150.0" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutY="60.0" spacing="10">
+            <children>
+                <Label fx:id="fuelLabel" text="%fuel.label">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin></Label>
+                <TextField fx:id="fuelField" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </HBox.margin></TextField>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+        <Button fx:id="calculateButton" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="100.0" onAction="#calculate" text="%calculate.button">
+            <VBox.margin>
+                <Insets bottom="20.0" top="20.0" />
+            </VBox.margin></Button>
+        <Label fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="140.0" text="%result.label" />
+        <Label fx:id="errorLabel" layoutX="20.0" layoutY="140.0" text="%invalid.input" visible="false" />
+        <HBox alignment="CENTER" layoutY="300.0" prefHeight="150.0" prefWidth="283.0" spacing="10">
+            <children>
+                <Button fx:id="switchToEnglishButton" onAction="#switchToEnglish" text="English" />
+                <Button fx:id="switchToFrenchButton" onAction="#switchToFrench" text="Français" />
+                <Button fx:id="switchToJapaneseButton" onAction="#switchToJapanese" text="日本語" />
+                <Button fx:id="switchToPersianButton" onAction="#switchToPersian" text="فارسی" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+</VBox>
